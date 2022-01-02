@@ -72,7 +72,7 @@ public class MyArrayList<T> implements MyList<T> {
             First we need to shift-right all elements starting from index.
             However, we need to make sure to do not overwrite existing elements
             before we shift. That is the reason why we must start from the end
-            of the the list
+            of the list
          */
         for(int j=size-1; j>=index; j--){
             data[j+1] = data[j];

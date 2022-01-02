@@ -31,7 +31,7 @@ public class MergeSort implements MySort {
             course, though.
             Furthermore, you should consider that usually a sorting algorithm
             would not need for an object instance, and so could be in a "static"
-            method. Here we use regular methods to be able to ovverride from an
+            method. Here we use regular methods to be able to override from an
             interface (so we can re-use the same test cases for all the different
             implementations of MySort; recall you cannot override static methods).
             When using static methods, could still have something like:

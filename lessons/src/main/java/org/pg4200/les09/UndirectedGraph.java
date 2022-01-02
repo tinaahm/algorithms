@@ -12,7 +12,7 @@ import java.util.*;
  *
  * Created by arcuri82 on 25-Oct-17.
  */
-public class UndirectedGraph<V> implements  Graph<V>{
+public class UndirectedGraph<V> implements Graph<V> {
 
     /**
      * Key -> a vertex in the graph
@@ -122,7 +122,7 @@ public class UndirectedGraph<V> implements  Graph<V>{
     @Override
     public List<V> findPathDFS(V start, V end) {
 
-        if(! graph.containsKey(start) || ! graph.containsKey(end)){
+        if(! graph.containsKey(start) || ! graph.containsKey(end)) {
             /*
                 no point in searching if either start or end are not
                 in the graph.
@@ -130,7 +130,7 @@ public class UndirectedGraph<V> implements  Graph<V>{
             return null;
         }
 
-        if(start.equals(end)){
+        if(start.equals(end)) {
             //we do not consider cycles
             throw new IllegalArgumentException();
         }

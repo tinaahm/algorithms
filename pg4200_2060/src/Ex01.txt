@@ -1,0 +1,18 @@
+Task A:
+For the regex for "pg4200_00000.zip" I have taken the assumption that there
+should be 5 numbers before the ".zip" despite there being 4 numbers in the
+"kandidatnummer" that is meant to be the "id" part of the filename of this
+particular exam. This expression will result in a match if the name begins
+precisely with "pg4200_" and ends with ".zip" with 5 numbers in between which
+can be between 0 and 9.
+The regex is as follows:
+"pg4200_[0-9]{5}\.zip"
+
+Task B:
+The regex for this task is constructed to match an entire sentence consisting of
+any characters besides punctuation marks, any number of times, ([^.!?]*?) until
+it runs into a punctuation mark ([.?!]); given that there is one or more
+occurrences of "algorithms", "algdat" or "pg4200" in the sentence ((algorithms|algdat|pg4200)).
+
+The complete expression is as follows:
+"[^.!?]*?(algorithms|algdat|pg4200)[.?!]"

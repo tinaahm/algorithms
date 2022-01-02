@@ -93,7 +93,7 @@ public abstract class MyListTestTemplate {
     }
 
     @Test
-    public void testDeleteOne(){
+    public void  testDeleteOne(){
 
         MyList<Integer> data = getNewInstance(Integer.class);
 

@@ -119,7 +119,8 @@ public abstract class MyMapTestTemplate {
     @Test
     public void testRandom() {
 
-        int n = 100; //if you get failures, you can use lower number to help debugging, eg 5
+        int n = 5;//100 //if you get failures, you can use lower number to help
+        // debugging, eg 5
         List<String> keys = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
             keys.add("" + i);

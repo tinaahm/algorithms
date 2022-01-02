@@ -1,0 +1,44 @@
+Comparing the "StudentMap" class in the previous task to ArrayList, HashMap
+and BinaryTree it becomes evident that there are instances where StudentMap may
+be better suited. When it comes to the way in which these fetch the stored value
+based at key/index the way in which they do this by traversing the
+implementation is quite similar. For both HashMap and ArrayList you do go
+through the entire list searching for a match; which can be quite expensive if
+the key is at the very end (this is assuming no splitting of the array in
+half/quarters is being done based on the key value vs size). BinaryTree
+certainly is the most similar as they both traverse the nodes of a tree,
+however as StudentMap divides its roots into 10 different ones it is a bit more
+efficient than the BinaryTree which has only one root node. In other words,
+StudentMap would have the ability to fetch the value with better performance than the other structurs.
+
+In adding a new value StudentMap would do so with having to "travel" as much
+(which comes in handy as the structures grow) seeing as the Students are split
+into 10 different maps. This having to travel less applies to the BinaryTree
+which applies the same mechanisms expect for the aforementioned dividing of trees
+. In fact, both HashMap and ArrayList have to traverse their lists in order to
+find the key/index value. While HashMap only has to replace the previous value
+with a new one, ArrayList has to, if not adding to the end, shift the entire
+right side of the array by one so as to add the new value.
+
+The points previously mentioned also apply when it comes to the delete-function.
+With all structures having through traverse through themselves until they find
+a match. It is the operations that follow the looking up of the key that
+differentiates the performance. HashMap has the one with the least fuss; simply
+deleting the object at given key. In the ArrayList everything has to be moved
+forward by one, given that the item to delete is not at the end. StudentMap is
+almost equal to the BinaryTree, only beating it as a result of the multiple
+trees.
+
+As for the "getByName"-function it is perhaps the worse performing of the
+put/get/delete-functions as it has to check each node if the given string
+matches to the first or last name and if not proceed to do so for every node in
+said tree. This then continues until the Student with a matching name is
+returned or until all the nodes have been checked and no match has been made.
+This is quite an expensive operation, especially compared to the other functions
+implemented as they would only traverse one tree. While here it is necessary
+to do all 10 if no element is found, and should the element be in the 10 tree
+then it still is quite expensive compared to the get-function.
+
+Evidently, the StudentMap does offer some good alternatives to increase
+performance, but it would have to be quite a niche/similar case to the one
+implemented for it to reap the benefits.

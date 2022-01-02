@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
- *  Because this class is abstract, we cannot run its tests directly.
- *  We need to extend it first, and implement all of its abstract methods.
+ * Because this class is abstract, we cannot run its tests directly.
+ * We need to extend it first, and implement all of its abstract methods.
  */
 public abstract class MyListStringTestTemplate {
 
@@ -26,14 +26,14 @@ public abstract class MyListStringTestTemplate {
     private MyListString list;
 
     @BeforeEach
-    public void initTest(){
+    public void initTest() {
         //before each test is executed, create a new container
         list = getNewInstance();
     }
 
 
     @Test
-    public void testEmpty(){
+    public void testEmpty() {
 
         //a newly created container should be empty
         assertEquals(0, list.size());
@@ -41,7 +41,7 @@ public abstract class MyListStringTestTemplate {
 
 
     @Test
-    public void testAddOneElement(){
+    public void testAddOneElement() {
 
         int n = list.size();
 
@@ -56,7 +56,8 @@ public abstract class MyListStringTestTemplate {
             in the same test.
             Here, I am testing that adding an element increases the size by 1,
             regardless of its original size (even though I do actually test it
-            with just 0 as starting size, although I could add more tests to handle
+            with just 0 as starting size, although I could add more tests to
+            handle
             further different cases)
          */
     }
@@ -77,7 +78,7 @@ public abstract class MyListStringTestTemplate {
     }
 
     @Test
-    public void testAdd5Elements(){
+    public void testAdd5Elements() {
 
         assertEquals(0, list.size());
         String a = "a";
@@ -98,7 +99,7 @@ public abstract class MyListStringTestTemplate {
     }
 
     @Test
-    public void testOutOfIndex(){
+    public void testOutOfIndex() {
 
         assertNull(list.get(-5));
         assertNull(list.get(42));
